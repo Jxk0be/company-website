@@ -1,4 +1,4 @@
 <script>
 </script>
 
-<h1 class="md:pt-[70px]">Services Page</h1>
+<h1 class="pt-[70px]">Services Page</h1>

@@ -54,7 +54,7 @@
 
 <svelte:window bind:innerWidth={screenWidth} />
 
-<div class={`${isMenuOpen ? 'top-0 opacity-100' : 'opacity-0 top-[-100%]'} w-full text-white text-3xl font-semibold duration-[350ms] flex justify-center items-center flex-col lg:hidden transition-all h-full bg-[#212121] z-[5] fixed right-0`}>
+<div class={`${isMenuOpen ? 'top-0 opacity-100' : 'opacity-0 top-[-100%]'} w-full text-white text-3xl font-semibold duration-[450ms] flex justify-center items-center flex-col lg:hidden transition-all h-full bg-[#212121] z-[5] fixed right-0`}>
     <button class="fixed text-[35px] top-0 right-0 h-[70px] flex items-center pr-[16px]" on:click={handleMenu}>
         <Icon icon="ep:close-bold" />
     </button>
