@@ -1,0 +1,11 @@
+{
+    "data": {
+        "title": "Fusion Auto Lab",
+        "links": ["about", "services", "quote", "our work", "connect"],
+        "colors": {
+            "primary": "#234234",
+            "secondary": "#232343",
+            "background": "#ffebed"
+        }
+    }
+}
