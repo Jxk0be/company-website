@@ -54,8 +54,8 @@
 
 <svelte:window bind:innerWidth={screenWidth} />
 
-<div class={`${isMenuOpen ? 'top-0' : 'top-[-100%]'} w-full text-white text-3xl font-semibold duration-[670ms] flex ease-in-out justify-center items-center flex-col lg:hidden transition-all h-full bg-[#212121] z-[5] fixed right-0`}>
-    <button class={`${isMenuOpen ? 'top-0' : 'top-[-100%]'} fixed text-[35px] duration-[670ms] transitiona-all ease-in-out right-0 h-[70px] flex items-center pr-[16px]`} on:click={handleMenu}>
+<div class={`${isMenuOpen ? 'translate-y-0' : 'translate-y-[-100%]'} w-full text-white text-3xl font-semibold duration-[670ms] flex ease-in-out justify-center items-center flex-col lg:hidden transition-all h-full bg-[#212121] z-[5] fixed right-0`}>
+    <button class={`${isMenuOpen ? 'translate-y-0' : 'translate-y-[50%]'} fixed top-0 text-[35px] duration-[670ms] transitiona-all ease-in-out right-0 h-[70px] flex items-center pr-[16px]`} on:click={handleMenu}>
         <Icon icon="ep:close-bold" />
     </button>
 
