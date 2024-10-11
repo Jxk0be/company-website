@@ -31,7 +31,7 @@
     <h1 class="text-xl z-[2] capitalize">automotive liquid wrapping</h1>
     <img class="absolute top-0 right-0 z-[1] w-full object-cover h-screen" src={HeroImg} alt="carHero" />
 </div>
-<div use:reveal={{ transition: "slide", blur: 20, x: -50, duration: 1200}} class="bg-[#4090ff] w-full h-screen flex items-center justify-center">
+<div use:reveal={{ transition: "slide", blur: 20, x: -50, duration: 1200}} class="bg-[#4090ff] px-[16px] md:px-0 w-full h-screen flex items-center justify-center">
     Testing 
 </div>
 

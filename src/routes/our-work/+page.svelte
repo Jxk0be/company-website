@@ -1,4 +1,4 @@
 <script>
 </script>
 
-<h1 class="pt-[70px]">Our Work Page</h1>
+<h1 class="pt-[70px] px-[16px] md:px-0">Our Work Page</h1>
