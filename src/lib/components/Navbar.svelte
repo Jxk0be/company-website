@@ -5,9 +5,9 @@
     import LogoText from "$lib/images/Logo.svg?raw"
     import NavData from "$lib/data/NavData.json"
     import { goto } from '$app/navigation';
+    import { isMenuOpen } from "../../store/nav.js";
 
     $: jsonData = NavData?.data
-    let isMenuOpen = false
     let screenWidth
     let isMobile = false
 
@@ -15,7 +15,7 @@
         event.preventDefault()
     }
 
-    $: if (isMenuOpen) {
+    $: if ($isMenuOpen) {
         if (browser) {
             window.addEventListener('wheel', preventScrolling, { passive: false })
             window.addEventListener('touchmove', preventScrolling, { passive: false })
@@ -28,15 +28,15 @@
         }
     }
 
-    $: if (!isMobile) isMenuOpen = false
+    $: if (!isMobile) $isMenuOpen = false
 
     const awaitNav = (route) => {
         goto(route)
-        isMenuOpen = false
+        $isMenuOpen = false
     }
 
     const handleMenu = () => {
-        isMenuOpen = !isMenuOpen
+        $isMenuOpen = !$isMenuOpen
     }
 
     $: if (screenWidth <= 1023) {
@@ -54,8 +54,8 @@
 
 <svelte:window bind:innerWidth={screenWidth} />
 
-<div class={`${isMenuOpen ? 'translate-y-0' : 'translate-y-[-100%]'} w-full text-white text-3xl font-semibold duration-[670ms] flex ease-in-out justify-center items-center flex-col lg:hidden transition-all h-full bg-[#212121] z-[5] fixed right-0`}>
-    <button class={`${isMenuOpen ? 'translate-y-0' : 'translate-y-[50%]'} fixed top-0 text-[35px] duration-[670ms] transitiona-all ease-in-out right-0 h-[70px] flex items-center pr-[16px]`} on:click={handleMenu}>
+<div class={`${$isMenuOpen ? 'translate-y-0' : 'translate-y-[-100%]'} w-full text-white text-3xl font-semibold duration-[670ms] flex ease-in-out justify-center items-center flex-col lg:hidden transition-all h-full bg-[#212121] z-[5] fixed right-0`}>
+    <button class={`${$isMenuOpen ? 'translate-y-0' : 'translate-y-[50%]'} fixed top-0 text-[35px] duration-[670ms] transitiona-all ease-in-out right-0 h-[70px] flex items-center pr-[16px]`} on:click={handleMenu}>
         <Icon icon="ep:close-bold" />
     </button>
 
@@ -77,7 +77,7 @@
     <div class="lg:px-[24px] relative z-[4] px-[16px] h-full w-full flex items-center justify-between">
         <button on:click={() => awaitNav("/")} class="cursor-pointer w-[100px]">{@html LogoText}</button>
 
-        {#if !isMenuOpen}
+        {#if !$isMenuOpen}
             <button on:click={handleMenu} class={`lg:hidden text-[35px] text-white transition-all ease-in-out rounded-xl duration-150`}>
                 <Icon icon="lucide:menu" />
             </button>
