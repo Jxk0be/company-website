@@ -85,16 +85,16 @@
     </div>
 </div>
 
-<div class={`${$isMenuOpen ? 'translate-y-[35%]' : 'translate-y-[-68%]'} fixed bg-[#212121] right-0 z-[3] text-lg font-semibold duration-[200ms] ease-in-out flex justify-start flex-col transition-all lg:hidden text-white w-full`}>
-    <button on:click={() => awaitNav("/")} class="py-1 w-full text-left lg:px-[24px] px-[16px] border-b-[1px] border-white/10 capitalize">Home</button>
+<div class={`${$isMenuOpen ? 'translate-y-[26%]' : 'translate-y-[-74%]'} fixed bg-[#212121] right-0 z-[3] text-lg font-semibold duration-[200ms] ease-in-out flex justify-start flex-col transition-all lg:hidden text-white w-full`}>
+    <button on:click={() => awaitNav("/")} class="py-[12px] w-full text-left px-[24px] border-b-[1px] border-white/10 capitalize">Home</button>
     {#each jsonData?.links as link, idx}
         {#if idx === jsonData?.links?.length - 1}
-            <button on:click={() => awaitNav(link)} class="text-left lg:px-[24px] px-[16px] py-1 w-full capitalize">{link}</button>
+            <button on:click={() => awaitNav(link)} class="text-left px-[24px] py-[12px] w-full capitalize">{link}</button>
         {:else}
             {#if link.toLowerCase() === "our work"}
-                <button on:click={() => awaitNav("our-work")} class="w-full text-left lg:px-[24px] px-[16px] border-b-[1px] border-white/10 py-1 capitalize">{link}</button>
+                <button on:click={() => awaitNav("our-work")} class="w-full text-left px-[24px] border-b-[1px] border-white/10 py-[12px] capitalize">{link}</button>
             {:else}
-                <button on:click={() => awaitNav(link)} class="w-full border-b-[1px] text-left lg:px-[24px] px-[16px] border-white/10 py-1 capitalize">{link}</button>
+                <button on:click={() => awaitNav(link)} class="w-full border-b-[1px] text-left px-[24px] border-white/10 py-[12px] capitalize">{link}</button>
             {/if}
         {/if}
     {/each}
