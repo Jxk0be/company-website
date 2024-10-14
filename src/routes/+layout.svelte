@@ -24,6 +24,6 @@
 </div>
 
 <Navbar />
-<div class="lg:px-[24px] h-screen w-full md:px-[16px]">
+<div class="h-screen w-full">
     <slot />
 </div>

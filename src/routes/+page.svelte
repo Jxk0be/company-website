@@ -33,7 +33,7 @@
 
 <svelte:window bind:innerWidth={screenWidth} />
 
-<div class="text-white w-full h-screen md:h-[70vh] flex flex-col items-center justify-center relative">
+<div class="text-white w-full h-screen md:h-[70vh] flex flex-col items-center justify-center relative lg:px-[24px] md:px-[16px]">
     <h1 class="text-3xl z-[2] md:w-[400px] md:max-w-[500px] min-w-[315px] max-w-[400px] w-3/4">{@html LogoText}</h1>
     <h1 class="text-xl z-[2] capitalize whitespace-nowrap">automotive liquid wrapping</h1>
     <div class="md:w-[400px] px-[16px] md:px-0 mt-4 z-[2] gap-3 w-full flex justify-between items-center h-[40px]">
