@@ -17,11 +17,6 @@
     }
     else isMobile = false
 
-    const awaitNav = (route) => {
-        goto(route)
-        $isMenuOpen = false
-    }
-
     onMount(async () => {
         /* We want the screenWidth to initialize to the window's width */
         if (browser) {
@@ -29,6 +24,10 @@
         }
     })
 
+    const awaitNav = (route) => {
+        goto(route)
+        $isMenuOpen = false
+    }
 </script>
 
 <svelte:window bind:innerWidth={screenWidth} />
@@ -43,7 +42,7 @@
     <img class="absolute top-0 right-0 z-[1] w-full object-cover md:h-[70vh] h-screen" src={HeroImg} alt="carHero" />
 </div>
 
-<div use:reveal={{ transition: "slide", blur: 20, x: -50, duration: 1200}} class="bg-[#4090ff] flex-col px-[16px] md:px-0 w-full h-screen flex items-center">
+<div use:reveal={{ transition: "slide", blur: 20, x: -50, duration: 1200}} class="lg:px-[24px] md:px-[16px] flex-col w-full h-screen flex items-center">
     <div id="about" class="w-full h-[100px]">&nbsp;</div>
     <h1 class="text-3xl font-bold">About Fusion Auto Lab</h1> 
 </div>

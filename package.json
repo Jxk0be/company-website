@@ -21,6 +21,7 @@
 	"type": "module",
 	"dependencies": {
 		"@iconify/svelte": "^4.0.2",
+		"nodemailer": "^6.9.15",
 		"svelte-inview": "^4.0.4"
 	}
 }
